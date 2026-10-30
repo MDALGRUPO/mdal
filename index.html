@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#171717">
+    <meta name="description" content="MDAL® Streetwear — vista sua atitude. Oversized, camisetas básicas e croppeds.">
+
+    <title>MDAL® | Streetwear</title>
+
+    <!-- Arquivo de estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="wrap nav">
+
+            <a class="brand" href="#inicio" aria-label="MDAL início">
+                <img src="assets/mdal-logo-white.png" alt="Logo MDAL">
+            </a>
+
+            <nav class="links">
+                <a href="#colecao">Coleção</a>
+                <a href="#sobre">A marca</a>
+                <a href="#parcerias">Parcerias</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-btn mobile-menu"
+                    onclick="document.querySelector('#colecao').scrollIntoView()">
+                    Comprar
+                </button>
+
+                <button class="icon-btn" onclick="openCart()">
+                    Sacola
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- BANNER PRINCIPAL -->
+        <div class="wrap hero" id="inicio">
+
+            <div>
+                <div class="eyebrow">
+                    MDAL® · Streetwear independente
+                </div>
+
+                <h1>
+                    Vista sua<br>
+                    <span>atitude.</span>
+                </h1>
+
+                <p>
+                    Estilo autêntico, peças versáteis e identidade em cada
+                    detalhe. Encontre o seu jeito de vestir MDAL.
+                </p>
+
+                <div class="actions">
+                    <a class="btn primary" href="#colecao">
+                        Explorar coleção ↗
+                    </a>
+
+                    <a class="btn" href="#parcerias">
+                        Faça parte da MDAL
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-art">
+                <img
+                    class="hero-logo"
+                    src="assets/mdal-logo-white.png"
+                    alt="MDAL — logo da marca"
+                >
+
+                <div class="hero-stamp">
+                    Não siga o padrão. Vista sua essência.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FAIXA DA MARCA -->
+        <div class="ticker">
+            <span>MDAL® STREETWEAR</span> ✳
+            <span>Vista sua atitude</span> ✳
+            <span>Feito para se expressar</span> ✳
+            <span>MDAL® STREETWEAR</span>
+        </div>
+
+        <!-- COLEÇÃO -->
+        <section id="colecao">
+
+            <div class="wrap">
+
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">Escolha sua peça</div>
+                        <h2>A coleção MDAL</h2>
+                    </div>
+
+                    <p>
+                        Peças essenciais para diferentes estilos.
+                        Escolha a cor e o tamanho e adicione à sua sacola.
+                    </p>
+                </div>
+
+                <div class="grid">
+
+                    <!-- PRODUTO 1: OVERSIZED -->
+                    <article
+                        class="product"
+                        data-name="Camiseta Oversized"
+                        data-price="89.90"
+                    >
+                        <div class="product-img">
+                            <small>Mais atitude</small>
+
+                            <div class="shirt"></div>
+
+                            <div class="product-mark">MDAL</div>
+                        </div>
+
+                        <div class="product-info">
+
+                            <div class="product-top">
+                                <h3>Oversized</h3>
+                                <span class="price">R$ 89,90</span>
+                            </div>
+
+                            <p class="sub">
+                                Modelagem ampla · Tamanhos G e G1
+                            </p>
+
+                            <div class="product-controls">
+
+                                <select class="color" aria-label="Cor oversized">
+                                    <option>Preto</option>
+                                    <option>Branco</option>
+                                    <option>Off White</option>
+                                    <option>Marrom</option>
+                                    <option>Vinho</option>
+                                </select>
+
+                                <select class="size" aria-label="Tamanho oversized">
+                                    <option>G</option>
+                                    <option>G1</option>
+                                </select>
+
+                            </div>
+
+                            <button class="add" onclick="addProduct(this)">
+                                Adicionar à sacola +
+                            </button>
+
+                        </div>
+                    </article>
+
+                    <!-- PRODUTO 2: BÁSICA -->
+                    <article
+                        class="product"
+                        data-name="Camiseta Básica"
+                        data-price="69.90"
+                    >
+                        <div class="product-img">
+                            <small>Essencial</small>
+
+                            <div class="shirt white"></div>
+
+                            <div
+                                class="product-mark"
+                                style="color:#171717;text-shadow:none"
+                            >
+                                MDAL
+                            </div>
+                        </div>
+
+                        <div class="product-info">
+
+                            <div class="product-top">
+                                <h3>Básica</h3>
+                                <span class="price">R$ 69,90</span>
+                            </div>
+
+                            <p class="sub">
+                                Tamanhos M, G e G1 · Algodão ou Dryfit
+                            </p>
+
+                            <div class="product-controls">
+
+                                <select class="color" aria-label="Cor básica">
+                                    <option>Preto</option>
+                                    <option>Off White</option>
+                                    <option>Azul Marinho</option>
+                                </select>
+
+                                <select class="material" aria-label="Malha">
+                                    <option>Algodão</option>
+                                    <option>Dryfit</option>
+                                </select>
+
+                            </div>
+
+                            <div style="margin-top:8px">
+                                <select
+                                    class="size"
+                                    style="width:100%"
+                                    aria-label="Tamanho básica"
+                                >
+                                    <option>M</option>
+                                    <option>G</option>
+                                    <option>G1</option>
+                                </select>
+                            </div>
+
+                            <button class="add" onclick="addProduct(this)">
+                                Adicionar à sacola +
+                            </button>
+
+                        </div>
+                    </article>
+
+                    <!-- PRODUTO 3: CROPPED -->
+                    <article
+                        class="product"
+                        data-name="Cropped Feminino"
+                        data-price="59.90"
+                    >
+                        <div class="product-img">
+                            <small>Seu estilo</small>
+
+                            <div
+                                class="shirt off"
+                                style="
+                                    height:42%;
+                                    width:44%;
+                                    clip-path:polygon(
+                                        25% 0,39% 7%,61% 7%,75% 0,
+                                        100% 20%,83% 39%,72% 31%,
+                                        75% 78%,25% 78%,28% 31%,
+                                        17% 39%,0 20%
+                                    );
+                                "
+                            ></div>
+
+                            <div class="product-mark">MDAL</div>
+                        </div>
+
+                        <div class="product-info">
+
+                            <div class="product-top">
+                                <h3>Cropped feminino</h3>
+                                <span class="price">R$ 59,90</span>
+                            </div>
+
+                            <p class="sub">
+                                Tamanhos P, M e G
+                            </p>
+
+                            <div class="product-controls">
+
+                                <select class="color" aria-label="Cor cropped">
+                                    <option>Preto</option>
+                                    <option>Branco</option>
+                                </select>
+
+                                <select class="size" aria-label="Tamanho cropped">
+                                    <option>P</option>
+                                    <option>M</option>
+                                    <option>G</option>
+                                </select>
+
+                            </div>
+
+                            <button class="add" onclick="addProduct(this)">
+                                Adicionar à sacola +
+                            </button>
+
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE A MARCA -->
+        <section class="benefits" id="sobre">
+
+            <div class="wrap">
+
+                <div class="eyebrow">Por que MDAL?</div>
+
+                <div class="benefit-grid" style="margin-top:26px">
+
+                    <div class="benefit">
+                        <strong>01 / Identidade</strong>
+                        <p>
+                            Mais do que vestir: mostrar ao mundo quem você é,
+                            sem precisar dizer uma palavra.
+                        </p>
+                    </div>
+
+                    <div class="benefit">
+                        <strong>02 / Versatilidade</strong>
+                        <p>
+                            Peças que combinam com a sua rotina e acompanham
+                            o seu próprio ritmo.
+                        </p>
+                    </div>
+
+                    <div class="benefit">
+                        <strong>03 / Comunidade</strong>
+                        <p>
+                            Uma marca feita para conectar pessoas criativas,
+                            autênticas e cheias de atitude.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PARCERIAS E EMBAIXADORES -->
+        <section id="parcerias">
+
+            <div class="wrap collab">
+
+                <div>
+                    <div class="eyebrow">
+                        Vamos criar algo juntos?
+                    </div>
+
+                    <h2>
+                        A MDAL quer<br>
+                        conhecer você.
+                    </h2>
+
+                    <p>
+                        Estamos abertos a parcerias, collabs e novas ideias.
+                        Também buscamos embaixadores e pessoas com
+                        personalidade para serem rostos da marca.
+                        Se você acredita na nossa essência, vamos conversar.
+                    </p>
+
+                    <a
+                        class="btn primary"
+                        href="https://wa.me/5534998829396?text=Ol%C3%A1%2C%20MDAL!%20Tenho%20interesse%20em%20parceria%2C%20collab%20ou%20em%20ser%20embaixador(a)%20da%20marca."
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Quero representar a MDAL ↗
+                    </a>
+                </div>
+
+                <div class="collab-card">
+
+                    <div class="eyebrow">MDAL CREW</div>
+
+                    <h3>Procuramos pessoas que tenham:</h3>
+
+                    <ul>
+                        <li>Identidade própria e autenticidade.</li>
+                        <li>Vontade de criar conteúdo e projetos juntos.</li>
+                        <li>Conexão real com streetwear e cultura urbana.</li>
+                        <li>Ideias para colaborações criativas.</li>
+                    </ul>
+
+                    <p style="font-size:12px;color:#aaa">
+                        Conte um pouco sobre você e sua ideia pelo WhatsApp
+                        ou Instagram.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <div class="contact-strip" id="contato">
+
+            <div class="wrap contact-row">
+
+                <div>
+                    <h3>Fale com a MDAL®</h3>
+
+                    <p>
+                        Dúvidas sobre tamanhos, pedidos ou parcerias?
+                        Estamos por aqui.
+                    </p>
+                </div>
+
+                <div class="actions" style="margin:0">
+
+                    <a
+                        class="btn primary"
+                        href="https://wa.me/5534998829396"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        WhatsApp ↗
+                    </a>
+
+                    <a
+                        class="btn"
+                        href="mailto:mdal.grupo@gmail.com"
+                    >
+                        Enviar e-mail ↗
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <div class="wrap">
+
+            <div class="footer-top">
+
+                <div class="footer-brand">
+
+                    <img src="assets/mdal-logo-white.png" alt="MDAL">
+
+                    <div>
+                        <strong>MDAL® | Streetwear</strong>
+
+                        <p>
+                            Vista sua atitude. Expresse sua essência.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="footer-links">
+
+                    <a href="#colecao">Coleção</a>
+                    <a href="#parcerias">Parcerias & collabs</a>
+
+                    <a
+                        href="https://www.instagram.com/mdal.oficial/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Instagram ↗
+                    </a>
+
+                    <a
+                        href="https://wa.me/5534998829396"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        WhatsApp ↗
+                    </a>
+
+                    <a href="mailto:mdal.grupo@gmail.com">
+                        E-mail
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="copyright">
+
+                <span>
+                    © <span id="year"></span> MDAL®. Todos os direitos reservados.
+                </span>
+
+                <span>Streetwear independente · Brasil</span>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- FUNDO DO CARRINHO -->
+    <div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+    <!-- CARRINHO -->
+    <aside class="drawer" id="drawer" aria-label="Sacola de compras">
+
+        <div class="drawer-head">
+
+            <h2>Sua sacola</h2>
+
+            <button class="close" onclick="closeCart()">
+                Fechar ×
+            </button>
+
+        </div>
+
+        <div class="cart-items" id="cartItems"></div>
+
+        <div class="cart-summary">
+
+            <div class="sumline">
+                <span>Subtotal</span>
+                <span id="subtotal">R$ 0,00</span>
+            </div>
+
+            <div class="sumline">
+                <span>Desconto 2ª peça (5%)</span>
+                <span id="discount">− R$ 0,00</span>
+            </div>
+
+            <div class="sumline total">
+                <span>Total</span>
+                <span id="total">R$ 0,00</span>
+            </div>
+
+            <p class="hint" id="discountHint">
+                Adicione uma segunda peça e ganhe 5% de desconto nela.
+            </p>
+
+            <button class="btn primary checkout" onclick="checkout()">
+                Finalizar pedido pelo WhatsApp ↗
+            </button>
+
+            <p style="font-size:10px;color:#777">
+                O pedido será enviado para confirmação pelo WhatsApp.
+                Pagamento, entrega e disponibilidade serão combinados
+                com a equipe MDAL.
+            </p>
+
+        </div>
+
+    </aside>
+
+    <!-- Arquivo JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
